@@ -1,0 +1,280 @@
+:root{
+    /* nav */
+    --colorBackNav: #ff0000;
+
+    /* cont 1 */
+    --colorBackCont: #f2eee7;
+    --borderCont: #d4cab7;
+
+    /* card */
+    --btnCard: #e43636;
+    --btnCardHover: #df4a4a;
+
+    /* modal */
+    --btnCerrar:#777879;
+    --btnCerrarHover:#888889;
+
+    --color: #1e1e1e;
+    --color2: #e9e6e6;
+    --fuente: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    margin-bottom: 5rem ;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    font-size: 1.3em;
+    font-family: var(--fuente);
+    color: var(--color);
+}
+
+fieldset{
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+/* nav */
+
+.contenedor-nav{
+    background-color: var(--colorBackNav);
+    height: 5.5rem;
+    grid-column: 1/7;
+    grid-row: 1/2;
+}
+
+.nav{
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-enlaces{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.nav-titulo,
+.nav-enlaces{
+    margin-top: 2rem;
+}
+
+.nav-titulo a,
+.nav-enlaces a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* contenido */
+
+.contenedor{
+    margin-top: 10rem;
+    grid-column: 1/7;
+    grid-row: 1/7;
+}
+
+.cont1{
+    width: 100%;
+    height: 200px;
+    max-width: 50%;
+    margin: 3rem auto 0 auto;
+    padding: 1rem;
+    border: 1px solid var(--borderCont);
+    border-radius: 10px;
+    background-color: var(--colorBackCont);
+}
+
+.cont1 h1{
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.cont1 select{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+/* favoritos */
+
+.cont2{
+    width: 100%;
+    max-width: 80%;
+    margin: 3rem auto 0 auto;
+}
+
+.cont2 h1,
+.cont2 p{
+    text-align: center;
+}
+
+/* card de recetas */
+.resultado{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.card{
+    width: 350px;
+    border: 1px solid var(--borderCont);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card h2{
+    margin: 0;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card .divBoton{
+    width: 100%;
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+.card button{
+    width: 100%;
+    height: 50px;
+    background-color: var(--btnCard);
+    color: var(--colorBackCont);
+    border: none;
+    border-radius: 10px;
+}
+
+.card button:hover{
+    cursor: pointer;
+    background-color: var(--btnCardHover);
+}
+
+/* modal */
+
+.contenedor-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.titulo,
+.contenedor-card,
+.botones{
+    width: 40%;
+    background-color: var(--colorBackCont);
+}
+
+.titulo h1{
+    margin-bottom: 1rem;
+}
+
+.titulo{
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--color);
+    border-radius: 20px 20px 0 0;
+}
+
+.contenedor-card{
+    overflow-y: auto;
+}
+
+.contenedor-card img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.ingredientes,
+.instrucciones{
+    padding: 1rem;
+}
+
+.ingredientes ul{
+    list-style: disc;
+}
+
+.instrucciones p{
+    margin: 0;
+}
+
+.botones{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0 0 20px 20px;
+}
+
+.botones button{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: var(--colorBackCont);
+}
+
+.botones button:hover{
+    cursor: pointer;
+}
+
+.btn-cerrar{
+    background-color: var(--btnCerrar);
+}
+
+.btn-fav{
+    background-color: var(--btnCard);
+}
+
+.btn-cerrar:hover{
+    background-color: var(--btnCerrarHover);
+}
+
+.btn-fav:hover{
+    background-color: var(--btnCardHover);
+}
