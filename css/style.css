@@ -278,3 +278,44 @@ fieldset{
 .btn-fav:hover{
     background-color: var(--btnCardHover);
 }
+
+@media(max-width: 768px){
+    .cont1{
+        max-width: 70%;
+    }
+
+    .card{
+        width: 300px;
+    }
+
+    .titulo,
+    .contenedor-card,
+    .botones{
+        width: 70%;
+    }
+}
+
+@media(max-width: 576px){
+    .cont1{
+        max-width: 80%;
+    }
+
+    .card{
+        width: 250px;
+    }
+}
+
+@media(max-width: 485px){
+    .cont1{
+        height: 250px;
+    }
+    .card{
+        width: 300px;
+    }
+
+    .titulo,
+    .contenedor-card,
+    .botones{
+        width: 90%;
+    }
+}
